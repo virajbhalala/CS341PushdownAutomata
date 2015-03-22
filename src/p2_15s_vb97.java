@@ -13,6 +13,7 @@ public class p2_15s_vb97 {
 			System.out.println("Please input the string to test the program!");
 			String input = s.nextLine();
 			System.out.println("You entered: " + input);
+			PDA( input);
 			
 		}
 		else
@@ -24,12 +25,20 @@ public class p2_15s_vb97 {
 		
 	
 	}
+	
+	
+	public static void PDA(String input){
+		System.out.println("assume £ is an epsilon symbol");
+		printOut('$','£','$',"q1", "q2");
+	}
+
+	//£ assume this epsilon symbol (option+3)
 	Stack stack=new Stack();
 	
 	
 	
-	public static String printOut( char symbolRead, char symbolPopped, char SymbolPushed, String state ){
-		return "Read: " +symbolRead+ ", Popped: " +symbolPopped + " --> Pushed: " +SymbolPushed +" | State: " +state+ "\n" ; 
+	public static void printOut( char symbolRead, char symbolPopped, char SymbolPushed, String Lstate, String Estate ){
+		 System.out.println("Read: " +symbolRead+ ", Popped: " +symbolPopped + " --> Pushed: " +SymbolPushed +" | State left: " +Lstate+ " State Entering: " +Estate + "\n") ; 
 	}
 
 	//will be used to print the stack
