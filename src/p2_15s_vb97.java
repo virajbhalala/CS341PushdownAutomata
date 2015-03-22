@@ -13,6 +13,7 @@ public class p2_15s_vb97 {
 			System.out.println("Please input the string to test the program!");
 			String input = s.nextLine();
 			System.out.println("You entered: " + input);
+			
 		}
 		else
 		{
@@ -20,13 +21,23 @@ public class p2_15s_vb97 {
 		}
 		
 		
+		
+	
 	}
 	Stack stack=new Stack();
+	
+	
+	
+	public static String printOut( char symbolRead, char symbolPopped, char SymbolPushed, String state ){
+		return "Read: " +symbolRead+ ", Popped: " +symbolPopped + " --> Pushed: " +SymbolPushed +" | State: " +state+ "\n" ; 
+	}
 
+	//will be used to print the stack
 	public static String printState(){
 		return "";
 		
 	}
+			
 
 }
 
