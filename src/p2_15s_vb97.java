@@ -9,6 +9,15 @@ public class p2_15s_vb97 {
 		String answer = s.nextLine();
 		
 		
+		if(answer.compareTo("y")==0 ||answer.compareTo("Y")==0){
+			System.out.println("Please input the string to test the program!");
+			String input = s.nextLine();
+			System.out.println("You entered: " + input);
+		}
+		else
+		{
+			System.out.println("Program terminated!");
+		}
 		
 		
 	}
