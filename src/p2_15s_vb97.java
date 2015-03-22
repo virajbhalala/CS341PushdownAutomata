@@ -13,7 +13,7 @@ public class p2_15s_vb97 {
 			System.out.println("Please input the string to test the program!");
 			String input = s.nextLine();
 			System.out.println("You entered: " + input);
-			PDA( input);
+			start( input);
 			
 		}
 		else
@@ -25,27 +25,43 @@ public class p2_15s_vb97 {
 		
 	
 	}
-	
-	
-	public static void PDA(String input){
-		System.out.println("assume £ is an epsilon symbol");
-		printOut('$','£','$',"q1", "q2");
-	}
+	public static int index=0;
+	public static String[] args = {};
 
-	//£ assume this epsilon symbol (option+3)
-	Stack stack=new Stack();
+
+	//read,pop->push
+	public static void start(String input){
+		int index=0;
+		Stack stack=new Stack();
+		//System.out.println("assume £ is an epsilon symbol");
+		if (input.charAt(0)=='$'){
+			stack.push("$");
+			printOut("$","epsilon","$","q1", "q2");
+		}
+		else
+		{
+			rejected();
+		}
+		
+	}
 	
-	
-	
-	public static void printOut( char symbolRead, char symbolPopped, char SymbolPushed, String Lstate, String Estate ){
+		
+	public static void printOut( String symbolRead, String symbolPopped, String SymbolPushed, String Lstate, String Estate ){
 		 System.out.println("Read: " +symbolRead+ ", Popped: " +symbolPopped + " --> Pushed: " +SymbolPushed +" | State left: " +Lstate+ " State Entering: " +Estate + "\n") ; 
 	}
 
 	//will be used to print the stack
-	public static String printState(){
-		return "";
+	public static void rejected(){
+		System.out.println("String is rejected!");
+		main(args);
 		
 	}
+	public static void accepted (){
+		System.out.println("String is accepted!");
+		main(args);
+	}
+
+	
 			
 
 }
