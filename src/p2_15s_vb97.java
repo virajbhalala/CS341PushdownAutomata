@@ -27,26 +27,26 @@ public class p2_15s_vb97 {
 	}
 	public static int index=0;
 	public static String[] args = {};
+	private  static Stack stack=new Stack();
 
 
 	//read,pop->push
 	public static void start(String input){
 		int index=0;
-		Stack stack=new Stack();
 		//System.out.println("assume £ is an epsilon symbol");
 		if (input.charAt(0)=='$'){
 			stack.push("$");
 			printOut("$","epsilon","$","q1", "q2");
 			index++;
 			if(Character.isLetter(input.charAt(index))){
-				printOut(input.substring(index, index+1),"epsilon","epsilon","q1", "q2");
+				printOut(input.substring(index, index+1),"epsilon","epsilon","q2", "q3");
 				//stack.push(input.substring(index, index+1));
 				q3(input);
 				index++;
 			}
 			else if(input.charAt(index) == '('){
 				stack.push("(");
-				printOut(input.substring(index, index+1),"epsilon","(","q1", "q2");
+				printOut(input.substring(index, index+1),"epsilon","(","q1", "q5");
 				q5(input);
 				index++;
 				}
@@ -70,6 +70,19 @@ public class p2_15s_vb97 {
 		
 	}
 	public static void q5(String input){
+		if(input.charAt(index) == '('){
+			stack.push("(");
+			printOut(input.substring(index, index+1),"epsilon","(","q5", "q5");
+			q5(input);
+			index++;
+		}
+		else if(Character.isLetter(input.charAt(index))){
+			printOut(input.substring(index, index+1),"epsilon","epsilon","q5", "q3");
+			//stack.push(input.substring(index, index+1));
+			q3(input);
+			index++;
+		}
+		else reject();
 	
 	}
 	public static void q6(String input){
