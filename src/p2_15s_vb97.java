@@ -7,8 +7,6 @@ public class p2_15s_vb97 {
 		System.out.println("Do you want to enter a string? Enter Y or y for yes");
 		Scanner s= new Scanner(System.in);
 		String answer = s.nextLine();
-		
-		
 		if(answer.compareTo("y")==0 ||answer.compareTo("Y")==0){
 			System.out.println("Please input the string to test the program!");
 			String input = s.nextLine();
@@ -47,7 +45,7 @@ public class p2_15s_vb97 {
 			}
 			else if(index<size && input.charAt(index) == '('){
 				stack.push("(");
-				printOut(input.substring(index, index+1),"epsilon","(","q1", "q5");
+				printOut(input.substring(index, index+1),"epsilon","(","q2", "q5");
 				index++;
 				q5(input);
 				}
@@ -83,14 +81,20 @@ public class p2_15s_vb97 {
 	
 		//else reject();
 		else if (index<size && input.charAt(index) == ')'){
-			stack.push("(");
-			printOut(input.substring(index, index+1),"(","epsilon","q3", "q6");
-			index++;
-			q6(input);
+			if (stack.peek()=="("){
+				stack.pop();
+				stack.push("(");
+				printOut(input.substring(index, index+1),"(","epsilon","q3", "q6");
+				index++;
+				q6(input);
+			}
 		}
-		else if (index<size && input.charAt(0)=='$'){
-			stack.push("$");
-			printOut("$","epsilon","$","q1", "q2");
+		
+		
+		
+		else if (index<size && input.charAt(0)=='$' && stack.peek()=="$"){
+			stack.pop();
+			printOut("$","$","epsilon","q3", "q7");
 			index++;
 			q7(input);
 		}
@@ -108,7 +112,7 @@ public class p2_15s_vb97 {
 			q5(input);
 		}
 		else if(index<size && Character.isLetter(input.charAt(index))){
-			printOut(input.substring(index, index+1),"epsilon","epsilon","q4", "q5");
+			printOut(input.substring(index, index+1),"epsilon","epsilon","q4", "q3");
 			//stack.push(input.substring(index, index+1));
 			index++;
 			q3(input);
@@ -139,21 +143,22 @@ public class p2_15s_vb97 {
 	public static void q6(String input){
 		int size= input.length();
 
-		if (index<size && input.charAt(index) == ')'){
+		if (index<size && input.charAt(index) == ')' && stack.peek()=="("){
+			stack.pop();
 			stack.push("(");
-			printOut(input.substring(index, index+1),"(","epsilon","q3", "q6");
+			printOut(input.substring(index, index+1),"(","epsilon","q6", "q6");
 			index++;
 			q6(input);
 		}
 		else if(index<size && input.substring(index, index+1).contains(operators)){
-			printOut(input.substring(index, index+1),"epsilon","epsilon","q3", "q4");
+			printOut(input.substring(index, index+1),"epsilon","epsilon","q6", "q4");
 			index++;
 			q4(input);
 			
 		} 
-		else if (index<size && input.charAt(0)=='$'){
-			stack.push("$");
-			printOut("$","epsilon","$","q1", "q2");
+		else if (index<size && input.charAt(0)=='$' && stack.peek()=="$"){
+			stack.pop();
+			printOut("$","$","epsilon","q3", "q7");
 			index++;
 			q7(input);
 		}
@@ -163,10 +168,12 @@ public class p2_15s_vb97 {
 	}
 	public static void q7(String input){
 		int size= input.length();
-		//check to see if it is end of the string
-		if (index==size){
+		//check to see if it is end of the string (index is already incremented previously so we dont have to write index+1)
+		if (index==size && stack.empty()){
 			accept();
 		}
+		else
+			reject();
 	}
 		
 	public static void printOut( String symbolRead, String symbolPopped, String SymbolPushed, String Lstate, String Estate ){
