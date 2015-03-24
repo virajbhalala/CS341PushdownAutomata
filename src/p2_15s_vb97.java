@@ -62,11 +62,41 @@ public class p2_15s_vb97 {
 		
 		
 	}
+	
+	//private static char[]  x= new char [];
+	private static String operators = "+-*/";
 	public static void q3(String input){
+		if (Character.isLetter(input.charAt(index)) || Character.isDigit(input.charAt(index)) || input.charAt(index) == '_' ){
+			printOut(input.substring(index, index+1),"epsilon","epsilon","q3", "q3");
+			q3(input);
+			index++;
+		}
+		else if(input.substring(index, index+1).contains(operators)){
+			printOut(input.substring(index, index+1),"epsilon","epsilon","q3", "q4");
+			q4(input);
+			index++;
+			
+		}
+		else
+		//else reject();
 		
 		
 	}
 	public static void q4(String input){
+		if(input.charAt(index) == '('){
+			stack.push("(");
+			printOut(input.substring(index, index+1),"epsilon","(","q4", "q5");
+			q5(input);
+			index++;
+		}
+		else if(Character.isLetter(input.charAt(index))){
+			printOut(input.substring(index, index+1),"epsilon","epsilon","q4", "q5");
+			//stack.push(input.substring(index, index+1));
+			q3(input);
+			index++;
+		}
+		else reject();
+		
 		
 	}
 	public static void q5(String input){
