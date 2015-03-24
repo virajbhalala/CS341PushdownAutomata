@@ -4,7 +4,7 @@ import java.util.*;
 public class p2_15s_vb97 {
 	public static void main(String[] args){
 		
-		System.out.println("Do you want to enter a string?");
+		System.out.println("Do you want to enter a string? Enter Y or y for yes");
 		Scanner s= new Scanner(System.in);
 		String answer = s.nextLine();
 		
@@ -88,6 +88,12 @@ public class p2_15s_vb97 {
 			index++;
 			q6(input);
 		}
+		else if (index<size && input.charAt(0)=='$'){
+			stack.push("$");
+			printOut("$","epsilon","$","q1", "q2");
+			index++;
+			q7(input);
+		}
 		else reject();
 		
 		
@@ -158,7 +164,7 @@ public class p2_15s_vb97 {
 	public static void q7(String input){
 		int size= input.length();
 		//check to see if it is end of the string
-		if (index+1==size){
+		if (index==size){
 			accept();
 		}
 	}
