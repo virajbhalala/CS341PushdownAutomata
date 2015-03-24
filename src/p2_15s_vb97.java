@@ -31,20 +31,21 @@ public class p2_15s_vb97 {
 
 
 	//read,pop->push
+	//start method consist q1 and q2
 	public static void start(String input){
-		//System.out.println("assume £ is an epsilon symbol");
-		if (input.charAt(0)=='$'){
+		int size= input.length();
+		if (index<size && input.charAt(0)=='$'){
 			stack.push("$");
 			printOut("$","epsilon","$","q1", "q2");
 			index++;
 			
-			if(Character.isLetter(input.charAt(index))){
+			if(index<size && Character.isLetter(input.charAt(index))){
 				printOut(input.substring(index, index+1),"epsilon","epsilon","q2", "q3");
 				//stack.push(input.substring(index, index+1));
 				index++;
 				q3(input);
 			}
-			else if(input.charAt(index) == '('){
+			else if(index<size && input.charAt(index) == '('){
 				stack.push("(");
 				printOut(input.substring(index, index+1),"epsilon","(","q1", "q5");
 				index++;
@@ -63,15 +64,17 @@ public class p2_15s_vb97 {
 		
 	}
 	
-	//private static char[]  x= new char [];
 	private static String operators = "+-*/";
+	//From here, each state will have their own method. So it will be easier and less code when going from one state to another state multiple times
 	public static void q3(String input){
-		if (Character.isLetter(input.charAt(index)) || Character.isDigit(input.charAt(index)) || input.charAt(index) == '_' ){
+		int size= input.length();
+
+		if (index<size && Character.isLetter(input.charAt(index)) || Character.isDigit(input.charAt(index)) || input.charAt(index) == '_' ){
 			printOut(input.substring(index, index+1),"epsilon","epsilon","q3", "q3");
 			index++;
 			q3(input);
 		}
-		else if(input.substring(index, index+1).contains(operators)){
+		else if(index<size && input.substring(index, index+1).contains(operators)){
 			printOut(input.substring(index, index+1),"epsilon","epsilon","q3", "q4");
 			index++;
 			q4(input);
@@ -79,7 +82,7 @@ public class p2_15s_vb97 {
 		}
 	
 		//else reject();
-		else if (input.charAt(index) == ')'){
+		else if (index<size && input.charAt(index) == ')'){
 			stack.push("(");
 			printOut(input.substring(index, index+1),"(","epsilon","q3", "q6");
 			index++;
@@ -90,13 +93,15 @@ public class p2_15s_vb97 {
 		
 	}
 	public static void q4(String input){
-		if(input.charAt(index) == '('){
+		int size= input.length();
+
+		if(index<size && input.charAt(index) == '('){
 			stack.push("(");
 			printOut(input.substring(index, index+1),"epsilon","(","q4", "q5");
 			index++;
 			q5(input);
 		}
-		else if(Character.isLetter(input.charAt(index))){
+		else if(index<size && Character.isLetter(input.charAt(index))){
 			printOut(input.substring(index, index+1),"epsilon","epsilon","q4", "q5");
 			//stack.push(input.substring(index, index+1));
 			index++;
@@ -107,14 +112,16 @@ public class p2_15s_vb97 {
 		
 	}
 	public static void q5(String input){
-		if(input.charAt(index) == '('){
+		int size= input.length();
+
+		if(index<size && input.charAt(index) == '('){
 			stack.push("(");
 			printOut(input.substring(index, index+1),"epsilon","(","q5", "q5");
 			index++;
 			q5(input);
 			
 		}
-		else if(Character.isLetter(input.charAt(index))){
+		else if(index<size && Character.isLetter(input.charAt(index))){
 			printOut(input.substring(index, index+1),"epsilon","epsilon","q5", "q3");
 			//stack.push(input.substring(index, index+1));
 			index++;
@@ -124,19 +131,21 @@ public class p2_15s_vb97 {
 	
 	}
 	public static void q6(String input){
-		if (input.charAt(index) == ')'){
+		int size= input.length();
+
+		if (index<size && input.charAt(index) == ')'){
 			stack.push("(");
 			printOut(input.substring(index, index+1),"(","epsilon","q3", "q6");
 			index++;
 			q6(input);
 		}
-		else if(input.substring(index, index+1).contains(operators)){
+		else if(index<size && input.substring(index, index+1).contains(operators)){
 			printOut(input.substring(index, index+1),"epsilon","epsilon","q3", "q4");
 			index++;
 			q4(input);
 			
 		} 
-		else if (input.charAt(0)=='$'){
+		else if (index<size && input.charAt(0)=='$'){
 			stack.push("$");
 			printOut("$","epsilon","$","q1", "q2");
 			index++;
@@ -147,15 +156,18 @@ public class p2_15s_vb97 {
 	
 	}
 	public static void q7(String input){
-		
-	
+		int size= input.length();
+		//check to see if it is end of the string
+		if (index+1==size){
+			accept();
+		}
 	}
 		
 	public static void printOut( String symbolRead, String symbolPopped, String SymbolPushed, String Lstate, String Estate ){
 		 System.out.println("READ: " +symbolRead+ " \t POPPED: " +symbolPopped + " \t --> PUSHED: " +SymbolPushed +"  |   State left: " +Lstate+ " \t State Entering: " +Estate + "\n") ; 
 	}
-
-	//will be used to print the stack
+	
+	//I have made accept and reject method just to decrease the code size
 	public static void reject(){
 		System.out.println("String is rejected!");
 		main(args);
