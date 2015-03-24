@@ -1,0 +1,381 @@
+1)
+Do you want to enter a string? Enter y for yes and n for no
+y
+Please input the string to test the program!
+$a_3b$
+You entered: $a_3b$
+Entering start state q1
+READ: $ 	 POPPED: epsilon 	 --> PUSHED: $  |   State left: q1 	 State Entering: q2
+READ: a 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q2 	 State Entering: q3
+READ: _ 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: 3 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: b 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: $ 	 POPPED: $ 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q7
+String is accepted!
+
+
+2)
+Do you want to enter a string? Enter y for yes and n for no
+y
+Please input the string to test the program!
+$ba76_+r*d3-fg_45n/hi6$
+You entered: $ba76_+r*d3-fg_45n/hi6$
+Entering start state q1
+READ: $ 	 POPPED: epsilon 	 --> PUSHED: $  |   State left: q1 	 State Entering: q2
+READ: b 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q2 	 State Entering: q3
+READ: a 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: 7 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: 6 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: _ 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: + 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+READ: r 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q4 	 State Entering: q3
+READ: * 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+READ: d 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q4 	 State Entering: q3
+READ: 3 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: - 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+READ: f 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q4 	 State Entering: q3
+READ: g 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: _ 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: 4 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: 5 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: n 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: / 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+READ: h 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q4 	 State Entering: q3
+READ: i 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: 6 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: $ 	 POPPED: $ 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q7
+String is accepted!
+
+
+3)
+Do you want to enter a string? Enter y for yes and n for no
+y
+Please input the string to test the program!
+$ba+c4*7e-f8/h98u$
+You entered: $ba+c4*7e-f8/h98u$
+Entering start state q1
+READ: $ 	 POPPED: epsilon 	 --> PUSHED: $  |   State left: q1 	 State Entering: q2
+READ: b 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q2 	 State Entering: q3
+READ: a 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: + 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+READ: c 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q4 	 State Entering: q3
+READ: 4 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: * 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+String is rejected!
+
+
+4)
+Do you want to enter a string? Enter y for yes and n for no
+y
+Please input the string to test the program!
+$(x23g)y33$
+You entered: $(x23g)y33$
+Entering start state q1
+READ: $ 	 POPPED: epsilon 	 --> PUSHED: $  |   State left: q1 	 State Entering: q2
+READ: ( 	 POPPED: epsilon 	 --> PUSHED: (  |   State left: q2 	 State Entering: q5
+READ: x 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q5 	 State Entering: q3
+READ: 2 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: 3 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: g 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: ) 	 POPPED: ( 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q6
+String is rejected!
+
+
+5)
+Do you want to enter a string? Enter y for yes and n for no
+y
+Please input the string to test the program!
+$(((r1+er-fs)*j5))*(a2)$
+You entered: $(((r1+er-fs)*j5))*(a2)$
+Entering start state q1
+READ: $ 	 POPPED: epsilon 	 --> PUSHED: $  |   State left: q1 	 State Entering: q2
+READ: ( 	 POPPED: epsilon 	 --> PUSHED: (  |   State left: q2 	 State Entering: q5
+READ: ( 	 POPPED: epsilon 	 --> PUSHED: (  |   State left: q5 	 State Entering: q5
+READ: ( 	 POPPED: epsilon 	 --> PUSHED: (  |   State left: q5 	 State Entering: q5
+READ: r 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q5 	 State Entering: q3
+READ: 1 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: + 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+READ: e 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q4 	 State Entering: q3
+READ: r 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: - 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+READ: f 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q4 	 State Entering: q3
+READ: s 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: ) 	 POPPED: ( 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q6
+READ: * 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q6 	 State Entering: q4
+READ: j 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q4 	 State Entering: q3
+READ: 5 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: ) 	 POPPED: ( 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q6
+READ: ) 	 POPPED: ( 	 --> PUSHED: epsilon  |   State left: q6 	 State Entering: q6
+READ: * 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q6 	 State Entering: q4
+READ: ( 	 POPPED: epsilon 	 --> PUSHED: (  |   State left: q4 	 State Entering: q5
+READ: a 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q5 	 State Entering: q3
+READ: 2 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: ) 	 POPPED: ( 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q6
+READ: $ 	 POPPED: $ 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q7
+String is accepted!
+
+
+6)
+Do you want to enter a string? Enter y for yes and n for no
+y
+Please input the string to test the program!
+$(t0+wk)*bn)/c1$
+You entered: $(t0+wk)*bn)/c1$
+Entering start state q1
+READ: $ 	 POPPED: epsilon 	 --> PUSHED: $  |   State left: q1 	 State Entering: q2
+READ: ( 	 POPPED: epsilon 	 --> PUSHED: (  |   State left: q2 	 State Entering: q5
+READ: t 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q5 	 State Entering: q3
+READ: 0 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: + 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+READ: w 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q4 	 State Entering: q3
+READ: k 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: ) 	 POPPED: ( 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q6
+READ: * 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q6 	 State Entering: q4
+READ: b 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q4 	 State Entering: q3
+READ: n 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+String is rejected!
+
+
+
+7)
+Do you want to enter a string? Enter y for yes and n for no
+y
+Please input the string to test the program!
+$(((ui+ej*(vk+ci))/pt)$
+You entered: $(((ui+ej*(vk+ci))/pt)$
+Entering start state q1
+READ: $ 	 POPPED: epsilon 	 --> PUSHED: $  |   State left: q1 	 State Entering: q2
+READ: ( 	 POPPED: epsilon 	 --> PUSHED: (  |   State left: q2 	 State Entering: q5
+READ: ( 	 POPPED: epsilon 	 --> PUSHED: (  |   State left: q5 	 State Entering: q5
+READ: ( 	 POPPED: epsilon 	 --> PUSHED: (  |   State left: q5 	 State Entering: q5
+READ: u 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q5 	 State Entering: q3
+READ: i 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: + 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+READ: e 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q4 	 State Entering: q3
+READ: j 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: * 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+READ: ( 	 POPPED: epsilon 	 --> PUSHED: (  |   State left: q4 	 State Entering: q5
+READ: v 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q5 	 State Entering: q3
+READ: k 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: + 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+READ: c 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q4 	 State Entering: q3
+READ: i 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: ) 	 POPPED: ( 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q6
+READ: ) 	 POPPED: ( 	 --> PUSHED: epsilon  |   State left: q6 	 State Entering: q6
+READ: / 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q6 	 State Entering: q4
+READ: p 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q4 	 State Entering: q3
+READ: t 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: ) 	 POPPED: ( 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q6
+String is rejected!
+
+
+
+8)
+Do you want to enter a string? Enter y for yes and n for no
+y
+Please input the string to test the program!
+$+g5$
+You entered: $+g5$
+Entering start state q1
+READ: $ 	 POPPED: epsilon 	 --> PUSHED: $  |   State left: q1 	 State Entering: q2
+String is rejected!
+
+
+
+9)
+Do you want to enter a string? Enter y for yes and n for no
+y
+Please input the string to test the program!
+$a1a*(mb/(p+kd34e/e3)-fw)+yq/(((rw*y4_b_d-r57ee*t)/y6+ugf))$
+You entered: $a1a*(mb/(p+kd34e/e3)-fw)+yq/(((rw*y4_b_d-r57ee*t)/y6+ugf))$
+Entering start state q1
+READ: $ 	 POPPED: epsilon 	 --> PUSHED: $  |   State left: q1 	 State Entering: q2
+READ: a 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q2 	 State Entering: q3
+READ: 1 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: a 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: * 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+READ: ( 	 POPPED: epsilon 	 --> PUSHED: (  |   State left: q4 	 State Entering: q5
+READ: m 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q5 	 State Entering: q3
+READ: b 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: / 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+READ: ( 	 POPPED: epsilon 	 --> PUSHED: (  |   State left: q4 	 State Entering: q5
+READ: p 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q5 	 State Entering: q3
+READ: + 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+READ: k 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q4 	 State Entering: q3
+READ: d 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: 3 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: 4 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: e 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: / 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+READ: e 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q4 	 State Entering: q3
+READ: 3 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: ) 	 POPPED: ( 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q6
+READ: - 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q6 	 State Entering: q4
+READ: f 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q4 	 State Entering: q3
+READ: w 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: ) 	 POPPED: ( 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q6
+READ: + 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q6 	 State Entering: q4
+READ: y 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q4 	 State Entering: q3
+READ: q 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: / 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+READ: ( 	 POPPED: epsilon 	 --> PUSHED: (  |   State left: q4 	 State Entering: q5
+READ: ( 	 POPPED: epsilon 	 --> PUSHED: (  |   State left: q5 	 State Entering: q5
+READ: ( 	 POPPED: epsilon 	 --> PUSHED: (  |   State left: q5 	 State Entering: q5
+READ: r 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q5 	 State Entering: q3
+READ: w 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: * 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+READ: y 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q4 	 State Entering: q3
+READ: 4 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: _ 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: b 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: _ 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: d 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: - 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+READ: r 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q4 	 State Entering: q3
+READ: 5 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: 7 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: e 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: e 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: * 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+READ: t 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q4 	 State Entering: q3
+READ: ) 	 POPPED: ( 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q6
+READ: / 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q6 	 State Entering: q4
+READ: y 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q4 	 State Entering: q3
+READ: 6 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: + 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+READ: u 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q4 	 State Entering: q3
+READ: g 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: f 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: ) 	 POPPED: ( 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q6
+READ: ) 	 POPPED: ( 	 --> PUSHED: epsilon  |   State left: q6 	 State Entering: q6
+READ: $ 	 POPPED: $ 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q7
+String is accepted!
+
+
+10)
+Do you want to enter a string? Enter y for yes and n for no
+y
+Please input the string to test the program!
+$g0*(hs+(df-*ft))$
+You entered: $g0*(hs+(df-*ft))$
+Entering start state q1
+READ: $ 	 POPPED: epsilon 	 --> PUSHED: $  |   State left: q1 	 State Entering: q2
+READ: g 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q2 	 State Entering: q3
+READ: 0 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: * 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+READ: ( 	 POPPED: epsilon 	 --> PUSHED: (  |   State left: q4 	 State Entering: q5
+READ: h 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q5 	 State Entering: q3
+READ: s 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: + 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+READ: ( 	 POPPED: epsilon 	 --> PUSHED: (  |   State left: q4 	 State Entering: q5
+READ: d 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q5 	 State Entering: q3
+READ: f 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: - 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+String is rejected!
+
+
+11)
+Do you want to enter a string? Enter y for yes and n for no
+y
+Please input the string to test the program!
+$(tg+(hy-j7))/uk)*ri+(eo/wp$
+You entered: $(tg+(hy-j7))/uk)*ri+(eo/wp$
+Entering start state q1
+READ: $ 	 POPPED: epsilon 	 --> PUSHED: $  |   State left: q1 	 State Entering: q2
+READ: ( 	 POPPED: epsilon 	 --> PUSHED: (  |   State left: q2 	 State Entering: q5
+READ: t 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q5 	 State Entering: q3
+READ: g 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: + 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+READ: ( 	 POPPED: epsilon 	 --> PUSHED: (  |   State left: q4 	 State Entering: q5
+READ: h 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q5 	 State Entering: q3
+READ: y 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: - 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+READ: j 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q4 	 State Entering: q3
+READ: 7 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: ) 	 POPPED: ( 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q6
+READ: ) 	 POPPED: ( 	 --> PUSHED: epsilon  |   State left: q6 	 State Entering: q6
+READ: / 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q6 	 State Entering: q4
+READ: u 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q4 	 State Entering: q3
+READ: k 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+String is rejected!
+
+
+12)
+Do you want to enter a string? Enter y for yes and n for no
+y
+Please input the string to test the program!
+$(tg+(hy-j9))/uk)ri$
+You entered: $(tg+(hy-j9))/uk)ri$
+Entering start state q1
+READ: $ 	 POPPED: epsilon 	 --> PUSHED: $  |   State left: q1 	 State Entering: q2
+READ: ( 	 POPPED: epsilon 	 --> PUSHED: (  |   State left: q2 	 State Entering: q5
+READ: t 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q5 	 State Entering: q3
+READ: g 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: + 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+READ: ( 	 POPPED: epsilon 	 --> PUSHED: (  |   State left: q4 	 State Entering: q5
+READ: h 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q5 	 State Entering: q3
+READ: y 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: - 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+READ: j 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q4 	 State Entering: q3
+READ: 9 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: ) 	 POPPED: ( 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q6
+READ: ) 	 POPPED: ( 	 --> PUSHED: epsilon  |   State left: q6 	 State Entering: q6
+READ: / 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q6 	 State Entering: q4
+READ: u 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q4 	 State Entering: q3
+READ: k 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+String is rejected!
+
+
+13)
+Do you want to enter a string? Enter y for yes and n for no
+y
+Please input the string to test the program!
+$wm-(tn*bu)+$
+You entered: $wm-(tn*bu)+$
+Entering start state q1
+READ: $ 	 POPPED: epsilon 	 --> PUSHED: $  |   State left: q1 	 State Entering: q2
+READ: w 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q2 	 State Entering: q3
+READ: m 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: - 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+READ: ( 	 POPPED: epsilon 	 --> PUSHED: (  |   State left: q4 	 State Entering: q5
+READ: t 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q5 	 State Entering: q3
+READ: n 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: * 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+READ: b 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q4 	 State Entering: q3
+READ: u 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: ) 	 POPPED: ( 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q6
+READ: + 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q6 	 State Entering: q4
+String is rejected!
+
+
+14)
+Do you want to enter a string? Enter y for yes and n for no
+y
+Please input the string to test the program!
+$wm-tn(*bu)$
+You entered: $wm-tn(*bu)$
+Entering start state q1
+READ: $ 	 POPPED: epsilon 	 --> PUSHED: $  |   State left: q1 	 State Entering: q2
+READ: w 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q2 	 State Entering: q3
+READ: m 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: - 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+READ: t 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q4 	 State Entering: q3
+READ: n 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+String is rejected!
+
+
+15)
+Do you want to enter a string? Enter y for yes and n for no
+y
+Please input the string to test the program!
+$wm-)tn*bu($
+You entered: $wm-)tn*bu($
+Entering start state q1
+READ: $ 	 POPPED: epsilon 	 --> PUSHED: $  |   State left: q1 	 State Entering: q2
+READ: w 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q2 	 State Entering: q3
+READ: m 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q3
+READ: - 	 POPPED: epsilon 	 --> PUSHED: epsilon  |   State left: q3 	 State Entering: q4
+String is rejected!
+Do you want to enter a string? Enter Y or y for yes
+y
+Please input the string to test the program!

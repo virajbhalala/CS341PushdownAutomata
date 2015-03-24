@@ -6,8 +6,8 @@ public class p2_15s_vb97 {
 		
 		System.out.println("Do you want to enter a string? Enter Y or y for yes");
 		Scanner s= new Scanner(System.in);
-		//String answer = s.nextLine();
-		String answer = "y";
+		String answer = s.nextLine();
+		//String answer = "y";
 		if(answer.compareTo("y")==0 ||answer.compareTo("Y")==0){
 			System.out.println("Please input the string to test the program!");
 			String input = s.nextLine();
@@ -183,10 +183,13 @@ public class p2_15s_vb97 {
 	//I have made accept and reject method just to decrease the code size
 	public static void reject(){
 		System.out.println("String is rejected!");
+		stack.clear();
+		index=0;
 		main(args);
 	}
 	public static void accept (){
 		System.out.println("String is accepted!");
+		index=0;
 		main(args);
 	}
 }
