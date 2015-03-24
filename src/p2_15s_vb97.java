@@ -1,45 +1,22 @@
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.InputStreamReader;
 import java.util.*;
 
 
 public class p2_15s_vb97 {
 	public static void main(String[] args){
 		
-		//System.out.println("Do you want to enter a string? Enter Y or y for yes");
+		System.out.println("Do you want to enter a string? Enter Y or y for yes");
 		Scanner s= new Scanner(System.in);
-		try{
-		File file = new File("/Users/virajbhalala/Desktop/prog2test.txt");
-		FileInputStream fis = new FileInputStream(file);
-		 
-		//Construct BufferedReader from InputStreamReader
-		BufferedReader br = new BufferedReader(new InputStreamReader(fis));
-		String line = null;
-		while ((line = br.readLine()) != null) {
-			System.out.println("Do you want to enter a string? Enter Y or y for yes");
-			//System.out.println(line);
-			//String answer = s.nextLine();
-			if(line.compareTo("y")==0 ||line.compareTo("Y")==0){
-				System.out.println("Please input the string to test the program!");
-				String input = br.readLine();
-				System.out.println("You entered: " + input);
-				start( input);	
-			}
-			else
-			{
-				System.out.println("Program terminated!");
-			
+		//String answer = s.nextLine();
+		String answer = "y";
+		if(answer.compareTo("y")==0 ||answer.compareTo("Y")==0){
+			System.out.println("Please input the string to test the program!");
+			String input = s.nextLine();
+			System.out.println("You entered: " + input);
+			start( input);	
 		}
-	 
-		br.close();
-		}
-		
-		
-		}catch (IOException e) {
-			e.printStackTrace();
+		else
+		{
+			System.out.println("Program terminated!");
 		}
 	}
 	
@@ -53,9 +30,9 @@ public class p2_15s_vb97 {
 	//start method consist q1 and q2
 	public static void start(String input){
 		int size= input.length();
+		System.out.println("Entering start state q1");
 		//checking if index is less than size and if the character matches then go to corresponding state
 		if (index<size && input.charAt(0)=='$'){
-			System.out.println("Entering start state q1");
 			stack.push("$");
 			printOut("$","epsilon","$","q1", "q2");
 			index++;
@@ -77,6 +54,7 @@ public class p2_15s_vb97 {
 				}
 			else
 			{
+				//System.out.println(input.charAt(index));
 				reject();
 			}
 		}
@@ -90,30 +68,33 @@ public class p2_15s_vb97 {
 	//From here, each state will have their own method. So it will be easier and less code when going from one state to another state multiple times
 	public static void q3(String input){
 		int size= input.length();
+		//System.out.println(index);
+		//System.out.println(input.substring(index, index+1));
 
 		if (index<size && Character.isLetter(input.charAt(index)) || Character.isDigit(input.charAt(index)) || input.charAt(index) == '_' ){
 			printOut(input.substring(index, index+1),"epsilon","epsilon","q3", "q3");
 			index++;
 			q3(input);
 		}
-		else if(index<size && input.substring(index, index+1).contains(operators)){
+		else if(index<size && operators.contains(input.substring(index, index+1))){
 			printOut(input.substring(index, index+1),"epsilon","epsilon","q3", "q4");
 			index++;
 			q4(input);
 			
 		}
 	
-		//else reject();
 		else if (index<size && input.charAt(index) == ')'){
 			if (stack.peek()=="("){
 				stack.pop();
-				stack.push("(");
+				//stack.push("");
 				printOut(input.substring(index, index+1),"(","epsilon","q3", "q6");
 				index++;
 				q6(input);
 			}
+			else 
+				reject();
 		}
-		else if (index<size && input.charAt(0)=='$' && stack.peek()=="$"){
+		else if (index<size && input.charAt(index)=='$' && stack.peek()=="$"){
 			stack.pop();
 			printOut("$","$","epsilon","q3", "q7");
 			index++;
@@ -163,21 +144,19 @@ public class p2_15s_vb97 {
 	}
 	public static void q6(String input){
 		int size= input.length();
-
 		if (index<size && input.charAt(index) == ')' && stack.peek()=="("){
 			stack.pop();
-			stack.push("(");
 			printOut(input.substring(index, index+1),"(","epsilon","q6", "q6");
 			index++;
 			q6(input);
 		}
-		else if(index<size && input.substring(index, index+1).contains(operators)){
+		else if(index<size && operators.contains(input.substring(index, index+1))){
 			printOut(input.substring(index, index+1),"epsilon","epsilon","q6", "q4");
 			index++;
 			q4(input);
 			
 		} 
-		else if (index<size && input.charAt(0)=='$' && stack.peek()=="$"){
+		else if (index<size && input.charAt(index)=='$' && stack.peek()=="$"){
 			stack.pop();
 			printOut("$","$","epsilon","q3", "q7");
 			index++;
