@@ -1,28 +1,49 @@
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.IOException;
+import java.io.InputStreamReader;
 import java.util.*;
 
 
 public class p2_15s_vb97 {
 	public static void main(String[] args){
 		
-		System.out.println("Do you want to enter a string? Enter Y or y for yes");
+		//System.out.println("Do you want to enter a string? Enter Y or y for yes");
 		Scanner s= new Scanner(System.in);
-		String answer = s.nextLine();
-		if(answer.compareTo("y")==0 ||answer.compareTo("Y")==0){
-			System.out.println("Please input the string to test the program!");
-			String input = s.nextLine();
-			System.out.println("You entered: " + input);
-			start( input);
+		try{
+		File file = new File("/Users/virajbhalala/Desktop/prog2test.txt");
+		FileInputStream fis = new FileInputStream(file);
+		 
+		//Construct BufferedReader from InputStreamReader
+		BufferedReader br = new BufferedReader(new InputStreamReader(fis));
+		String line = null;
+		while ((line = br.readLine()) != null) {
+			System.out.println("Do you want to enter a string? Enter Y or y for yes");
+			//System.out.println(line);
+			//String answer = s.nextLine();
+			if(line.compareTo("y")==0 ||line.compareTo("Y")==0){
+				System.out.println("Please input the string to test the program!");
+				String input = br.readLine();
+				System.out.println("You entered: " + input);
+				start( input);	
+			}
+			else
+			{
+				System.out.println("Program terminated!");
 			
 		}
-		else
-		{
-			System.out.println("Program terminated!");
+	 
+		br.close();
 		}
 		
 		
-		
-	
+		}catch (IOException e) {
+			e.printStackTrace();
+		}
 	}
+	
+	//static variable which will be commonly used in most of the methods
 	public static int index=0;
 	public static String[] args = {};
 	private  static Stack stack=new Stack();
@@ -32,18 +53,23 @@ public class p2_15s_vb97 {
 	//start method consist q1 and q2
 	public static void start(String input){
 		int size= input.length();
+		//checking if index is less than size and if the character matches then go to corresponding state
 		if (index<size && input.charAt(0)=='$'){
+			System.out.println("Entering start state q1");
 			stack.push("$");
 			printOut("$","epsilon","$","q1", "q2");
 			index++;
 			
+			//checking if index is less than size and if the character matches then go to corresponding state
+			//we dont need worry about popping, pushing, and peeking stuff when it is epsilon 
 			if(index<size && Character.isLetter(input.charAt(index))){
 				printOut(input.substring(index, index+1),"epsilon","epsilon","q2", "q3");
-				//stack.push(input.substring(index, index+1));
 				index++;
 				q3(input);
 			}
+			
 			else if(index<size && input.charAt(index) == '('){
+				//since 
 				stack.push("(");
 				printOut(input.substring(index, index+1),"epsilon","(","q2", "q5");
 				index++;
@@ -57,9 +83,7 @@ public class p2_15s_vb97 {
 		else
 		{
 			reject();
-		}
-		
-		
+		}	
 	}
 	
 	private static String operators = "+-*/";
@@ -89,9 +113,6 @@ public class p2_15s_vb97 {
 				q6(input);
 			}
 		}
-		
-		
-		
 		else if (index<size && input.charAt(0)=='$' && stack.peek()=="$"){
 			stack.pop();
 			printOut("$","$","epsilon","q3", "q7");
@@ -177,23 +198,18 @@ public class p2_15s_vb97 {
 	}
 		
 	public static void printOut( String symbolRead, String symbolPopped, String SymbolPushed, String Lstate, String Estate ){
-		 System.out.println("READ: " +symbolRead+ " \t POPPED: " +symbolPopped + " \t --> PUSHED: " +SymbolPushed +"  |   State left: " +Lstate+ " \t State Entering: " +Estate + "\n") ; 
+		 System.out.println("READ: " +symbolRead+ " \t POPPED: " +symbolPopped + " \t --> PUSHED: " +SymbolPushed +"  |   State left: " +Lstate+ " \t State Entering: " +Estate); 
 	}
 	
 	//I have made accept and reject method just to decrease the code size
 	public static void reject(){
 		System.out.println("String is rejected!");
 		main(args);
-		
 	}
 	public static void accept (){
 		System.out.println("String is accepted!");
 		main(args);
 	}
-
-	
-			
-
 }
 
 	
