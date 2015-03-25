@@ -1,23 +1,27 @@
+
+
 import java.util.*;
-
-
 public class p2_15s_vb97 {
 	public static void main(String[] args){
 		
-		System.out.println("Do you want to enter a string? Enter Y or y for yes");
+		System.out.println("Do you want to enter a string? Enter y for yes and n for no");
 		Scanner s= new Scanner(System.in);
 		String answer = s.nextLine();
 		//String answer = "y";
-		if(answer.compareTo("y")==0 ||answer.compareTo("Y")==0){
+		if(answer.compareTo("y")==0){
 			System.out.println("Please input the string to test the program!");
 			String input = s.nextLine();
 			System.out.println("You entered: " + input);
 			start( input);	
 		}
-		else
-		{
+		else if (answer.compareTo("n")==0){
 			System.out.println("Program terminated!");
 		}
+		else{
+			System.out.println("You did not enter right letter. Please enter y for yes and n for no");
+			main(args);
+		}
+		
 	}
 	
 	//static variable which will be commonly used in most of the methods
@@ -70,7 +74,8 @@ public class p2_15s_vb97 {
 		int size= input.length();
 		//System.out.println(index);
 		//System.out.println(input.substring(index, index+1));
-
+        
+        //if it is a letter, digit, or _
 		if (index<size && Character.isLetter(input.charAt(index)) || Character.isDigit(input.charAt(index)) || input.charAt(index) == '_' ){
 			printOut(input.substring(index, index+1),"epsilon","epsilon","q3", "q3");
 			index++;
@@ -83,6 +88,7 @@ public class p2_15s_vb97 {
 			
 		}
 	
+        //if ")" then we have to pop  "("
 		else if (index<size && input.charAt(index) == ')'){
 			if (stack.peek()=="("){
 				stack.pop();
@@ -94,6 +100,8 @@ public class p2_15s_vb97 {
 			else 
 				reject();
 		}
+		
+		//if "$" at the end then we have to pop $ which was in the beginning
 		else if (index<size && input.charAt(index)=='$' && stack.peek()=="$"){
 			stack.pop();
 			printOut("$","$","epsilon","q3", "q7");
@@ -126,6 +134,7 @@ public class p2_15s_vb97 {
 	public static void q5(String input){
 		int size= input.length();
 
+		//this call function itself again
 		if(index<size && input.charAt(index) == '('){
 			stack.push("(");
 			printOut(input.substring(index, index+1),"epsilon","(","q5", "q5");
@@ -166,6 +175,8 @@ public class p2_15s_vb97 {
 			reject();
 	
 	}
+	
+	//accept state
 	public static void q7(String input){
 		int size= input.length();
 		//check to see if it is end of the string (index is already incremented previously so we dont have to write index+1)
